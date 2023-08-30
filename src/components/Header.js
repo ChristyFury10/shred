@@ -5,7 +5,7 @@ import "./Header.css"
 const Header = () => {
   return (
     <div className='header-main'>
-      <img className = "logo-img" src = {headerImage}></img>
+      <img className = "logo-img" src = {headerImage} alt="shredtown-logo"></img>
     </div>
   )
 }

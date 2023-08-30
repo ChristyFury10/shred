@@ -1,11 +1,12 @@
 import React from 'react'
 import Button from 'react-bootstrap/esm/Button'
+import {FaUserFriends} from 'react-icons/fa'
 
 const Friends = () => {
   return (
-    <div>
-      <Button className='btn-info'> Friends </Button>
-    </div>
+    
+      <Button className='btn-info main-button'> <FaUserFriends className='button-icon'/> </Button>
+   
   )
 }
 

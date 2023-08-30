@@ -1,10 +1,11 @@
 import React from 'react'
 import Button from 'react-bootstrap/esm/Button'
+import {PiMountainsDuotone} from 'react-icons/pi'
+
+
 const Trails = (props) => {
   return (
-    <div>
-      <Button className='btn-info'> Trails </Button>
-    </div>
+      <Button className='btn-info main-button'> <PiMountainsDuotone className='button-icon'/> </Button>
   )
 }
 

@@ -1,42 +1,48 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
-import 'bootstrap/js/dist/dropdown';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/js/dist/dropdown";
+import "bootstrap/dist/css/bootstrap.min.css";
+import './SelectResort.css'
 
+const SelectResort = ({ resort, setResort }) => {
+  const resortOptions = [{ name: "liberty", location: "PA" }, { name: "whitetail", location: "PA" }];
+  
+  const selectResort = (selectedResort) => {
+    const newResort = resortOptions.find(option => option.name === selectedResort)
+    setResort(newResort);
+  };
 
-
-const SelectResort = () => {
   return (
+    <div className="select-main-div">
+    
+        <Dropdown onSelect={selectResort} className="select-dropdown">
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Select Resort
+          </Dropdown.Toggle>
 
-    <div>
-        <nav>
-            <Dropdown>
+          <Dropdown.Menu>
+            {/* start GPT  */}
+            {resortOptions.map((option) => (
+              <Dropdown.Item key={option.name} eventKey={option.name}>
+                {option.name}
+              </Dropdown.Item>
+            ))}
 
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Select Resort
-            </Dropdown.Toggle>
+            {/* end GPT */}
 
-            <Dropdown.Menu>
-                <Dropdown.Item>
-                    <ResortItem text = {"Whitetail"}/>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                    <ResortItem text = {"Liberty"}/>
-                </Dropdown.Item>
-            </Dropdown.Menu>
-
-            </Dropdown>
-        </nav>
+          </Dropdown.Menu>
+        </Dropdown>
+      
     </div>
   );
 };
 
-function ResortItem(props) {
-  return (
-    <li>
-      <a>{props.text}</a>
-    </li>
-  );
-}
+// function ResortItem(props) {
+//   return (
+//     <li>
+//       <div>{props.text}</div>
+//     </li>
+//   );
+// }
 
 export default SelectResort;

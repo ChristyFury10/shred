@@ -3,9 +3,7 @@ import Button from 'react-bootstrap/esm/Button'
 
 const SOS = () => {
   return (
-    <div>
-        <Button className='btn-danger'>S.O.S.</Button>
-    </div>
+        <Button className='btn-danger main-button'>EMERGENCY</Button> 
   )
 }
 

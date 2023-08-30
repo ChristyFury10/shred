@@ -1,11 +1,10 @@
 import React from 'react'
 import Button from 'react-bootstrap/esm/Button'
+import{TbShiJumping} from 'react-icons/tb'
 
 const TerrainPark = () => {
   return (
-    <div>
-      <Button className='btn-info'> Terrain Park </Button>
-    </div>
+      <Button className='btn-info main-button'> <TbShiJumping className='button-icon'/> </Button>
   )
 }
 

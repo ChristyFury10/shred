@@ -1,9 +1,10 @@
 
 import './App.css';
-import { useNavigate, Route, Routes, useParams } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Welcome from './pages/Welcome';
 import Header from './components/Header';
 import {useState} from 'react'
+import LoginScreen from './LoginScreen';
 
 
 function App() {
@@ -13,11 +14,11 @@ function App() {
   let [resort, setResort] = useState({
     name: "liberty"
   });
-  console.log("resortState", resort.name)
 
 
   let routes = (
     <Routes>
+    <Route path="/" element= {<LoginScreen/>} />
     <Route path="/welcome" element={<Welcome resort={resort} setResort={setResort}/> }  />
     <Route path="/trailMaps" resort={resort}/>
     <Route path="/conditions" resort={resort}/>
@@ -31,7 +32,7 @@ function App() {
   );
 
   return (
-  <div>
+  <div className='main-app-div'>
     <header>
       <Header/>
     </header>
