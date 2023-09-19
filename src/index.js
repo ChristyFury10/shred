@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { AuthProvider } from '@descope/react-sdk';
 import { BrowserRouter } from 'react-router-dom';
 
 
@@ -9,8 +10,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+        {/* <AuthProvider
+            projectId='<Shred>' */}
+        {/* > */}
+            <App />
+        {/* </AuthProvider> */}
     </React.StrictMode>
   </BrowserRouter>
 );
-

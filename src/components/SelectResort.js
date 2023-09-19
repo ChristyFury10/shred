@@ -4,11 +4,16 @@ import "bootstrap/js/dist/dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './SelectResort.css'
 
-const SelectResort = ({ resort, setResort }) => {
-  const resortOptions = [{ name: "liberty", location: "PA" }, { name: "whitetail", location: "PA" }];
+const SelectResort = ({ resort, setResort, resortList, setResortList }) => {
+  
+  // const resortOptions = [{ name: "liberty", location: "PA" }, { name: "whitetail", location: "PA" }];
+  console.log("resortList length:", resortList.length); // Add this line
+
+  const resortOptions = resortList;
+  console.log("options:", resortOptions)
   
   const selectResort = (selectedResort) => {
-    const newResort = resortOptions.find(option => option.name === selectedResort)
+    const newResort = resortOptions.find(resort => resort.resortname === selectedResort);
     setResort(newResort);
   };
 
@@ -22,9 +27,9 @@ const SelectResort = ({ resort, setResort }) => {
 
           <Dropdown.Menu>
             {/* start GPT  */}
-            {resortOptions.map((option) => (
-              <Dropdown.Item key={option.name} eventKey={option.name}>
-                {option.name}
+            {resortList.map((resort) => (
+              <Dropdown.Item key={resort.resortname} eventKey={resort.resortname}>
+                {resort.resortname}
               </Dropdown.Item>
             ))}
 
