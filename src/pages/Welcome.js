@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import SelectResort from "../components/SelectResort";
 import SOS from "../components/SOS";
-import Music from "../components/Music";
-import Trails from "../components/Trails";
-import Weather from "../components/Weather";
-import TerrainPark from "../components/TerrainPark";
+import Music from "../components/MusicButton";
+import Weather from "../components/WeatherButton";
+import TerrainPark from "../components/TerrainParkButton";
 import Friends from "../components/Friends";
-import Lifts from "../components/Lifts";
-import Schedule from "../components/Schedule";
+import Lifts from "../components/LiftsButton";
+import Schedule from "../components/ScheduleButton";
 import "./Welcome.css";
+import TrailsButton from "../components/TrailsButton";
+import { Link } from "react-router-dom";
 
 
 const Welcome = ({ resort, setResort, resortList, setResortList }) => {
@@ -51,7 +52,8 @@ const Welcome = ({ resort, setResort, resortList, setResortList }) => {
         <div>You are currently viewing: {resort.resortName} </div>
         <div className="trails-and-weather">
           <div id="trails">
-            <Trails />
+            <Link to="/trailmaps"><TrailsButton /></Link>
+            
           </div>
           <div id="weather">
             <Weather />

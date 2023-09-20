@@ -5,7 +5,7 @@ import Welcome from './pages/Welcome';
 import Header from './components/Header';
 import React, { useState } from 'react';
 import LoginScreen from './pages/LoginScreen';
-// import Trails from './components/Trails';
+import TrailMaps from './pages/TrailMaps.js';
 // import Weather from './components/Weather';
 // import TerrainPark from './components/TerrainPark';
 // import Friends from './components/Friends';
@@ -32,8 +32,8 @@ let [resortList, setResortList] = useState([]);
     <Routes>
     <Route path="/" element={<LoginScreen />} />
     <Route path="/welcome" element={<Welcome resort={resort} setResort={setResort} resortList={resortList} setResortList={setResortList} />} />
-    {/* <Route path="/trailMaps" element={<Trails resort={resort} />} />
-    <Route path="/conditions" element={<Weather resort={resort} />} />
+     <Route path="/trailmaps" element={<TrailMaps resort={resort} />} />
+    {/*<Route path="/conditions" element={<Weather resort={resort} />} />
     <Route path="/terrainparks" element={<TerrainPark resort={resort} />} />
     <Route path="/friendszone" element={<Friends resort={resort} />} />
     <Route path="/liftdetails" element={<Lifts resort={resort} />} />

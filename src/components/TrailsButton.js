@@ -3,10 +3,10 @@ import Button from 'react-bootstrap/esm/Button'
 import {PiMountainsDuotone} from 'react-icons/pi'
 
 
-const Trails = (props) => {
+const TrailsButton = (props) => {
   return (
       <Button className='btn-info main-button'> <PiMountainsDuotone className='button-icon'/> </Button>
   )
 }
 
-export default Trails
+export default TrailsButton

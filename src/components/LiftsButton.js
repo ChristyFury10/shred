@@ -2,7 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/esm/Button'
 import {TbAerialLift} from 'react-icons/tb'
 
-const Lifts = () => {
+const LiftsButton = () => {
   return (
    
       <Button className='btn-info main-button'> <TbAerialLift className='button-icon'/> </Button>
@@ -10,4 +10,4 @@ const Lifts = () => {
   )
 }
 
-export default Lifts
+export default LiftsButton
