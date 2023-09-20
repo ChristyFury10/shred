@@ -48,7 +48,7 @@ const Welcome = ({ resort, setResort, resortList, setResortList }) => {
         <div className="select-resort">
           <SelectResort resort={resort} setResort={setResort} resortList={resortList} setResortList={setResortList}/>
         </div>
-        <div>You are currently viewing: {resort.resortname} </div>
+        <div>You are currently viewing: {resort.resortName} </div>
         <div className="trails-and-weather">
           <div id="trails">
             <Trails />

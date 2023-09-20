@@ -13,7 +13,7 @@ const SelectResort = ({ resort, setResort, resortList, setResortList }) => {
   console.log("options:", resortOptions)
   
   const selectResort = (selectedResort) => {
-    const newResort = resortOptions.find(resort => resort.resortname === selectedResort);
+    const newResort = resortOptions.find(resort => resort.resortName === selectedResort);
     setResort(newResort);
   };
 
@@ -28,8 +28,8 @@ const SelectResort = ({ resort, setResort, resortList, setResortList }) => {
           <Dropdown.Menu>
             {/* start GPT  */}
             {resortList.map((resort) => (
-              <Dropdown.Item key={resort.resortname} eventKey={resort.resortname}>
-                {resort.resortname}
+              <Dropdown.Item key={resort.resortName} eventKey={resort.resortName}>
+                {resort.resortName}
               </Dropdown.Item>
             ))}
 
