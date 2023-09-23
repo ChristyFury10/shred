@@ -6,11 +6,12 @@ import Weather from "../components/WeatherButton";
 import TerrainPark from "../components/TerrainParkButton";
 import Friends from "../components/Friends";
 import Lifts from "../components/LiftsButton";
-import Schedule from "../components/ScheduleButton";
+import ScheduleButton from "../components/ScheduleButton";
 import "./Welcome.css";
 import TrailsButton from "../components/TrailsButton";
 import { Link } from "react-router-dom";
-
+import Schedule from "./Schedule";
+import ButtonGallery from "../components/ButtonGallery";
 
 const Welcome = ({ resort, setResort, resortList, setResortList }) => {
 
@@ -50,7 +51,10 @@ const Welcome = ({ resort, setResort, resortList, setResortList }) => {
           <SelectResort resort={resort} setResort={setResort} resortList={resortList} setResortList={setResortList}/>
         </div>
         <div>You are currently viewing: {resort.resortName} </div>
-        <div className="trails-and-weather">
+
+      <ButtonGallery/>
+
+        {/* <div className="trails-and-weather">
           <div id="trails">
             <Link to="/trailmaps"><TrailsButton /></Link>
             
@@ -76,13 +80,13 @@ const Welcome = ({ resort, setResort, resortList, setResortList }) => {
           <Lifts />
         </div>
         <div id="schedule">
-          <Schedule />
+          <ScheduleButton />
         </div>
         </div>
-        
+        */}
         <div className="sos">
           <SOS />
-        </div>
+        </div> 
       </div>
     );
   }

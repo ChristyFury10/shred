@@ -1,0 +1,71 @@
+.main-welcome-div{
+    background-color: tan;
+    display: flex;
+    flex-direction: column;
+    width: 50vw
+}
+.select-resort{
+    width: 100%;
+    display: flex;
+}
+.trails-and-weather{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+
+
+}
+#trails{
+    flex: 2;
+    
+}
+#weather{
+    flex: 1;
+   
+}
+.terrain-and-friends{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+
+    
+}
+#terrain{
+    flex: 1;
+}
+#friends{
+    flex: 2
+}
+.music-lifts-schedule{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+
+} 
+#music{
+    flex: 1;
+
+}
+#lifts{
+    flex: 1;
+
+}
+#schedule{
+    flex: 1;
+
+}
+.sos{
+    align-self: center;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+/* #trails, #weather, #terrain, #friends, #music, #lifts, #schedule{
+    margin: 10px
+} */

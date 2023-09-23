@@ -32,7 +32,7 @@ let [resortList, setResortList] = useState([]);
     <Routes>
     <Route path="/" element={<LoginScreen />} />
     <Route path="/welcome" element={<Welcome resort={resort} setResort={setResort} resortList={resortList} setResortList={setResortList} />} />
-     <Route path="/trailmaps" element={<TrailMaps resort={resort} />} />
+    <Route path="/trailmaps" element={<TrailMaps resort={resort} />} />
     {/*<Route path="/conditions" element={<Weather resort={resort} />} />
     <Route path="/terrainparks" element={<TerrainPark resort={resort} />} />
     <Route path="/friendszone" element={<Friends resort={resort} />} />

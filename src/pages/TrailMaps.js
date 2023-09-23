@@ -1,5 +1,6 @@
 import React from 'react';
 import BackButton from '../components/BackButton';
+import './TrailMaps.css'
 
 const TrailMaps = (resort) => {
     console.log(resort)
@@ -12,7 +13,8 @@ const TrailMaps = (resort) => {
   return (
     <div>
         trail map image for {resort.resort.resortName}:
-      <img src= {resort.resort.trailMaps} alt="map"></img>
+        <br/>
+      <img src= {resort.resort.trailMaps} alt="map" className='trail-map-img'></img>
       <BackButton/>
     </div>
   )
